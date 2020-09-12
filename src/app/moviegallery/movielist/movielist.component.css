@@ -1,0 +1,105 @@
+li{
+    list-style: none;
+
+-webkit-transition: all .5s ease-in-out;
+transition: all .5s ease-in-out;
+margin-bottom: 18px;
+padding-right: 10px;
+
+}
+
+.rowul{
+    display: flex;
+    padding: 0;
+    
+    width: 100%;
+    white-space: nowrap;
+    line-height: 0;
+    margin-bottom: -18px;
+
+    margin-top: 0;
+    margin-left: 0;
+    scroll-padding: 50px;
+    overflow: hidden;
+    
+    
+
+}
+
+.imagerow{
+    font-family: Amazon Ember,Amazon Arabic Ember,Arial,sans-serif!important;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    position: relative;
+    overflow-y: hidden;
+
+    margin-left: 48px;
+    margin-right: 48px;
+    margin-bottom: 8px;
+    line-height: 24px;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+}
+
+.imagesize{
+    width:342px;
+    height:342px;
+}
+.rightbutton{
+    padding: 0;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 50px;
+    color: transparent;
+    border: 0;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    outline: 0 none;
+    opacity: 1;
+    border-radius: 0;
+    -webkit-transition: opacity .25s ease,background-color .25s ease;
+    transition: opacity .25s ease,background-color .25s ease;
+    background-color: rgba(15,23,30,.5);
+    background-image: url('/assets/images/right.svg');
+    right:0;
+}
+
+.leftbutton{
+    padding: 0;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 50px;
+    color: transparent;
+    border: 0;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    outline: 0 none;
+    opacity: 1;
+    border-radius: 0;
+    -webkit-transition: opacity .25s ease,background-color .25s ease;
+    transition: opacity .25s ease,background-color .25s ease;
+    background-color: rgba(15,23,30,.5);
+    background-image: url('/assets/images/left.svg');
+    left:0;
+}
+
+.genreTitle{
+    font-weight: 700;
+    font-size: 19px;
+    
+      
+        margin-left: 45px;
+        width: 1020px;
+        color:white;
+  
+}
+
+.spacerow{
+    padding-bottom: 30px;
+    padding-top: 40px;
+}

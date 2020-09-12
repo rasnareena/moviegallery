@@ -1,0 +1,14 @@
+<div class="container">
+    <div *ngFor="let genre of listofmoviesongenres | keyvalue" class="spacerow">
+        <div class="genreTitle">{{genre.key | uppercase}}</div>
+        <div class="imagerow">
+            <button class="leftbutton"></button>
+            <ul class="rowul">
+                <li *ngFor="let movies of genre.value">
+                    <img class="imagesize" [src]="movies.poster">
+                </li>
+            </ul>
+            <button class="rightbutton"></button>
+        </div>
+    </div>
+</div>
