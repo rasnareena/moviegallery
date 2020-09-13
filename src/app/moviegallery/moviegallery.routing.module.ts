@@ -3,11 +3,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { MovielistComponent } from './movielist/movielist.component';
 import { MoviedetailComponent } from './moviedetail/moviedetail.component' ;
 import { MoviegalleryComponent } from './moviegallery.component';
+
+//---Route to MovielistComponent and MoviedetailComponent
 const routes: Routes = [
     {path:'', component:MoviegalleryComponent,
      children:[
          {path:'', component:MovielistComponent},
-         {path:'detail',component:MoviedetailComponent}
+         {path:'detail/:id',component:MoviedetailComponent}
     ]}
     
 ];

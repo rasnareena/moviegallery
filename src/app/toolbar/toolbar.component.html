@@ -1,15 +1,17 @@
 <div class="toolbar" role="banner">
     <img
       width="40"
-      alt="Angular Logo"
+      alt="Wookie Logo"
       src="/assets/images/logo/logo.jpg"
     />
     <span>Wookie Movies</span>
       <div class="spacer"></div>
+
+      <!-- Search Field-->
       <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search Movie">
+        <input #search type="text" class="form-control" placeholder="Search Movie" (keydown.enter)="searchMovie(search.value)">
         <div class="input-group-append">
-          <button class="btn btn-secondary" type="button">
+          <button class="btn btn-secondary" (click)="searchMovie(search.value)"  type="button">
             <fa-icon [icon]="faSearch"></fa-icon>
           </button>
         </div>

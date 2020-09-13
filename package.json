@@ -26,8 +26,11 @@
     "@fortawesome/free-solid-svg-icons": "^5.14.0",
     "@ngrx/effects": "^10.0.0",
     "@ngrx/store": "^10.0.0",
+    "angular-star-rating": "^4.0.0-beta.3",
     "bootstrap": "^4.5.2",
     "jquery": "^3.5.1",
+    "primeicons": "^4.0.0",
+    "primeng": "^10.0.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"

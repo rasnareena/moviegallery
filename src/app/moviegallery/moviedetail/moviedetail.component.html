@@ -1,1 +1,33 @@
-<p>moviedetail works!</p>
+<div class="container">
+<div class="row topPadding">
+    <div class="col">
+        <img class="backdropimage" [src]="movie.backdrop">
+    </div>
+    <div class="col whitefontcolor">
+        <h1>{{movie.title}}</h1>
+        <div class="row greyfontcolor">
+            <div class="col "><h6>IMDb {{movie.imdb_rating}}</h6></div>
+            
+            <div class="col "><h6>{{movie.length}}</h6></div>
+            <div class="col "><h6>{{movie.released_on | date:'yyyy'}}</h6></div>
+        </div>
+        <div class="row">
+            <div class="col"><h4>Director: {{movie.director}}</h4></div>
+            
+        </div>
+        <div class="row">
+            <div class="col"><h4>Cast: {{movie.cast}}</h4></div>
+            
+        </div>
+        <div class="row">
+            <div class="col"><label>{{movie.overview}}</label></div>
+            
+        </div>
+        <div class="row">
+            <div class="col"><button type="button" class="btn btn-primary" (click)="prevPage()">Back</button></div>
+        </div>
+    </div>
+    
+</div>
+
+</div>

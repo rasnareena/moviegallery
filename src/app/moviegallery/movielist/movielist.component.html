@@ -1,14 +1,22 @@
 <div class="container">
-    <div *ngFor="let genre of listofmoviesongenres | keyvalue" class="spacerow">
+    <div *ngFor="let genre of listOfMoviesGenres | keyvalue" class="spacerow">
         <div class="genreTitle">{{genre.key | uppercase}}</div>
-        <div class="imagerow">
-            <button class="leftbutton"></button>
-            <ul class="rowul">
-                <li *ngFor="let movies of genre.value">
-                    <img class="imagesize" [src]="movies.poster">
-                </li>
+        <div class="imagerow" >
+            <button class="leftbutton" (click)="scrollLeft(container)" *ngIf="genre.value.length>3"></button>
+            <ul #container class="rowul">                
+                <li *ngFor="let movies of genre.value; let i = index" (click)="gotoDetailPage()">
+                   <a [routerLink]="['/detail', movies.id]"  ><img class="imagesize" [src]="movies.poster" > </a>
+                    <!--<div class="card imagecard" style="width: 18rem;" *ngIf="i==hoverIndex">
+                        <img class="card-img-top" [src]="movies.poster" src="..." alt="Card image cap">
+                        <div class="card-body">
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                      </div>-->
+                </li>                
             </ul>
-            <button class="rightbutton"></button>
+            <button class="rightbutton" (click)="scrollRight(container)" *ngIf="genre.value.length>3"></button>
         </div>
     </div>
+    <div *ngIf="!isMovieListAvailable" class="topmargin"><h4 class="whitefontcolor">Sorry, No Data</h4></div>
 </div>
+<!--(mouseover)="onHover(i)" (mouseout)="onHover(-1)  [queryParams]="{data:movies}"-->

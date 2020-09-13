@@ -1,22 +1,20 @@
 li{
     list-style: none;
-
--webkit-transition: all .5s ease-in-out;
-transition: all .5s ease-in-out;
-margin-bottom: 18px;
-padding-right: 10px;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    margin-bottom: 18px;
+    padding-right: 10px;
+    cursor: pointer;
 
 }
 
 .rowul{
     display: flex;
-    padding: 0;
-    
+    padding: 0;    
     width: 100%;
     white-space: nowrap;
     line-height: 0;
     margin-bottom: -18px;
-
     margin-top: 0;
     margin-left: 0;
     scroll-padding: 50px;
@@ -33,7 +31,6 @@ padding-right: 10px;
     box-sizing: border-box;
     position: relative;
     overflow-y: hidden;
-
     margin-left: 48px;
     margin-right: 48px;
     margin-bottom: 8px;
@@ -43,8 +40,15 @@ padding-right: 10px;
 }
 
 .imagesize{
-    width:342px;
-    height:342px;
+    width:300px;
+    height:300px;
+}
+
+.imagesize.imagecard{
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1;
 }
 .rightbutton{
     padding: 0;
@@ -103,3 +107,12 @@ padding-right: 10px;
     padding-bottom: 30px;
     padding-top: 40px;
 }
+
+.whitefontcolor{
+    color:white;
+}
+
+.topmargin{
+    margin-top: 100px;
+}
+
