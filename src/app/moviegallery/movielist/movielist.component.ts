@@ -23,6 +23,7 @@ export class MovielistComponent implements OnInit {
   private MovieSubscription: Subscription; 
   movieError: Error = null;
   private counter:number = 320;
+  private movieList:Movie[];
 
   /**
    * 
@@ -41,17 +42,17 @@ export class MovielistComponent implements OnInit {
     .pipe(
       map(x => {
         console.log(x);
-        this.movieService.movieList = x.Movies;
+        this.movieList = x.Movies;
         this.movieError = x.MovieError;
         //---List of all genres
-        this.listOfGenres = this.findCommonGenres(this.movieService.movieList);
+        this.listOfGenres = this.findCommonGenres(this.movieList);
        
         //--list of movies as value and genres as key
-        this.listOfMoviesGenres = this.findCommonMoviesGenres(this.movieService.movieList);
+        this.listOfMoviesGenres = this.findCommonMoviesGenres(this.movieList);
         
-        if(this.movieService.movieList['movies'] != undefined)
+        if(this.movieList['movies'] != undefined)
         {
-          this.isMovieListAvailable = this.movieService.movieList['movies'].length>0?true : false;
+          this.isMovieListAvailable = this.movieList['movies'].length>0?true : false;
         }
         
         

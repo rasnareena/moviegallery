@@ -12,7 +12,7 @@ import Movie  from '../model/movie.model';
 
     private ApiURL: string = 'https://wookie.codesubmit.io/movies';//---Api to fetch all movies and also to search particular movie
    
-    public movieList:Movie[];
+   // public movieList:Movie[];
     public searchName:string ="";
 
     constructor(private httpclient: HttpClient) {

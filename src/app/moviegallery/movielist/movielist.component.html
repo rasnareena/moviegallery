@@ -4,7 +4,7 @@
         <div class="imagerow" >
             <button class="leftbutton" (click)="scrollLeft(container)" *ngIf="genre.value.length>3"></button>
             <ul #container class="rowul">                
-                <li *ngFor="let movies of genre.value; let i = index" (click)="gotoDetailPage()">
+                <li *ngFor="let movies of genre.value; let i = index" >
                    <a [routerLink]="['/detail', movies.id]"  ><img class="imagesize" [src]="movies.poster" > </a>
                    
                 </li>                
